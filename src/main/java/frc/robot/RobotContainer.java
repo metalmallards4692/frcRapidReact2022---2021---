@@ -44,7 +44,7 @@ public class RobotContainer {
  public JoystickButton gamepadR3;
  public JoystickButton gamepadL3;
 
-
+// Try to find a way to get damp rate on joystick values or motors soit doesnt go from 0 - 100;
   public RobotContainer() {
     m_drivetrainSubsystem.setDefaultCommand(new DefaultDriveCommand(m_drivetrainSubsystem,
         () -> -modifyAxis(leftJoy.getY()) * DrivetrainSubsystem.MAX_VELOCITY_METERS_PER_SECOND,

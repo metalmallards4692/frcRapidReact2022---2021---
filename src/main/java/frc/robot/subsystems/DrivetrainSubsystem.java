@@ -111,9 +111,6 @@ private final AHRS m_navx = new AHRS(SPI.Port.kMXP, (byte) 200); // NavX connect
     );
   }
 
-  public void shooter() {
-
-  }
 
   /**
    * Sets the gyroscope angle to zero. This can be used to set the direction the robot is currently facing to the
@@ -154,5 +151,6 @@ private final AHRS m_navx = new AHRS(SPI.Port.kMXP, (byte) 200); // NavX connect
     m_frontRightModule.set(states[1].speedMetersPerSecond / MAX_VELOCITY_METERS_PER_SECOND * MAX_VOLTAGE, states[1].angle.getRadians());
     m_backLeftModule.set(states[2].speedMetersPerSecond / MAX_VELOCITY_METERS_PER_SECOND * MAX_VOLTAGE, states[2].angle.getRadians());
     m_backRightModule.set(states[3].speedMetersPerSecond / MAX_VELOCITY_METERS_PER_SECOND * MAX_VOLTAGE, states[3].angle.getRadians());
-  }
+}
+
 }

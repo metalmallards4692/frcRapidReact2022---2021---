@@ -1,13 +1,8 @@
 package frc.robot;
 
-import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.Joystick;
-import edu.wpi.first.wpilibj.XboxController;
-import edu.wpi.first.wpilibj.kinematics.ChassisSpeeds;
 import edu.wpi.first.wpilibj2.command.Command;
-import edu.wpi.first.wpilibj2.command.FunctionalCommand;
 import edu.wpi.first.wpilibj2.command.InstantCommand;
-import edu.wpi.first.wpilibj2.command.button.Button;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 import frc.robot.commands.ArmIn;
 import frc.robot.commands.ArmOut;
@@ -55,8 +50,8 @@ public class RobotContainer {
   }
 
   private void configureButtonBindings() {
-    //defining new buttons
-    //Joystick
+
+
     rTrigger = new JoystickButton(rightJoy, Constants.JoystickTriggerR);
     lTrigger = new JoystickButton(leftJoy, Constants.JoystickTriggerL);
     rInside = new JoystickButton(rightJoy, Constants.JoystickRightInside);
@@ -93,7 +88,7 @@ public class RobotContainer {
     return new InstantCommand();
   }
 
-  private static double deadband(double value, double deadband) {
+  /*private static double deadband(double value, double deadband) {
     if (Math.abs(value) > deadband) {
       if (value > 0.0) {
         return (value - deadband) / (1.0 - deadband);
@@ -104,7 +99,7 @@ public class RobotContainer {
       return 0.0;
     }
   }
-
+*/
   private static double modifyAxis(double value) {
     // Deadband
     //value = deadband(value, 0.05);

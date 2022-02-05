@@ -71,8 +71,4 @@ public final class Constants {
 
     //compressor
     public static Compressor cp;
-
-    //limelight values
-    public static double Kp = -0.1f;
-    public static double min_command = 0.05f;
 }
